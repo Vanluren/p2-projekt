@@ -16,7 +16,6 @@
 ## GitHub Setup Guide ##
 
   1. Lav en bruger på [GitHub](https://github.com/join?source=header-home)
-
     1. På [GitHub Education](https://education.github.com/) kan man få en masse lækre sager, hvis man tilknytter noget bevis for at man er studerende. Det kan varmt anbefales.    
 
   2. Herefter skal vi have installeret Git på din PC:
@@ -30,7 +29,7 @@
 
     2. Åben nu enten "Git Bash" eller "Command Prompt", og kør følgende kommandoer for at sætte dine brugeroplysninger op:
 
-      ```Shell
+      ```shell
         $ git config --global user.name "Emma Paris"
         $ git config --global user.email "eparis@atlassian.com"
       ```
@@ -43,7 +42,7 @@
 
     0. Åben først "Terminal" og kør følgende kommando:
 
-      ``` Shell
+      ```shell
         $ git --version
       ```
 
@@ -53,7 +52,7 @@
 
     2. Åben nu "Terminal", og kør følgende kommandoer for at sætte dine brugeroplysninger op:
 
-      ``` Shell
+      ```shell
         $ git config --global user.name "Emma Paris"
         $ git config --global user.email "eparis@atlassian.com"
       ```
