@@ -1,9 +1,9 @@
 ## Start her: ##
 
-  ### PHP ###
+### PHP ###
     Til at arbejde med PHP er der en række programmer der med fordel kan bruges. Et af dem er "PHPStorm" fra JetBrains. PHPStorm er det man kalder et "Intelligent Developement Enviornment"(IDE). Et IDE gør det væsentligt nemmere at skrive kode, fordi det er bygget til at give dig code hints og intelligente forslag til din kode. Det kan hentes gratis ved [JetBrains Students](https://www.jetbrains.com/student/)
 
-  ### Git ###
+### :octocat: Git :octocat: ###
 
     "Git" er det man kalder et versioneringssystem. Ideen bag det er at man "gemmer" versioner af filer, således at man nemt kan vende tilbage til en tidligere version, så man sikre at der ikke sker fejl, og så man kan håndtere nemt dette.
 
@@ -11,7 +11,7 @@
 
     Git kan bruges fra "Command Prompt" i windows, fra "Terminal" i MacOS og det kan repræsenteres visuelt via dedikerede programmer som f.eks. "Sourcetree".
 
-## GitHub Setup Guide ##
+## :octocat: GitHub Setup Guide :octocat: ##
 
 1. Lav en bruger på [GitHub](https://github.com/join?source=header-home)
     1. På [GitHub Education](https://education.github.com/) kan man få en masse lækre sager, hvis man tilknytter noget bevis for at man er studerende. Det kan varmt anbefales.
