@@ -31,3 +31,19 @@ $ git push
 ```
 
 ### Branching ###
+
+Branching give mulighed for at man som udvikler kan isolere den kode man arbejder på fra resten af repo'et, så man ikke laver ændringer der kan ødelægge andre udvikleres kode. I har allerede brugt Branching, da i gik fra "master" branchen til "git-commands".
+
+1. Det gjorde du med den første kommando:
+
+```Shell
+$ git checkout <BRANCH NAVN>
+```
+
+Den skifter fra en brach til en anden, hvis den branch findes.
+
+2. Hvis den gældende branch ikke findes, skal den branch laves.
+
+```Shell
+$ git checkout -b <NY BRANCH>
+```
