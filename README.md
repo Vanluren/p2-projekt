@@ -1,15 +1,16 @@
 ## Start her: ##
 
 ### PHP ###
-    Til at arbejde med PHP er der en række programmer der med fordel kan bruges. Et af dem er "PHPStorm" fra JetBrains. PHPStorm er det man kalder et "Intelligent Developement Enviornment"(IDE). Et IDE gør det væsentligt nemmere at skrive kode, fordi det er bygget til at give dig code hints og intelligente forslag til din kode. Det kan hentes gratis ved [JetBrains Students](https://www.jetbrains.com/student/)
+
+Til at arbejde med PHP er der en række programmer der med fordel kan bruges. Et af dem er "PHPStorm" fra JetBrains. PHPStorm er det man kalder et "Intelligent Developement Enviornment"(IDE). Et IDE gør det væsentligt nemmere at skrive kode, fordi det er bygget til at give dig code hints og intelligente forslag til din kode. Det kan hentes gratis ved [JetBrains Students](https://www.jetbrains.com/student/)
 
 ### :octocat: Git :octocat: ###
 
-    "Git" er det man kalder et versioneringssystem. Ideen bag det er at man "gemmer" versioner af filer, således at man nemt kan vende tilbage til en tidligere version, så man sikre at der ikke sker fejl, og så man kan håndtere nemt dette.
+"Git" er det man kalder et versioneringssystem. Ideen bag det er at man "gemmer" versioner af filer, således at man nemt kan vende tilbage til en tidligere version, så man sikre at der ikke sker fejl, og så man kan håndtere nemt dette.
 
-    "Github" er et system der er bygget til at konsolidere organisationers brug af Git, og formidle dette til dets brugere. Github er bare et af mange systemer der gør dette.
+"Github" er et system der er bygget til at konsolidere organisationers brug af Git, og formidle dette til dets brugere. Github er bare et af mange systemer der gør dette.
 
-    Git kan bruges fra "Command Prompt" i windows, fra "Terminal" i MacOS og det kan repræsenteres visuelt via dedikerede programmer som f.eks. "Sourcetree".
+Git kan bruges fra "Command Prompt" i windows, fra "Terminal" i MacOS og det kan repræsenteres visuelt via dedikerede programmer som f.eks. "Sourcetree".
 
 ## :octocat: GitHub Setup Guide :octocat: ##
 
@@ -25,9 +26,11 @@
     1. Du får i løbet af installationen muligheden for at kunne kører Git gennem en "Command Prompt" eller det der hedder "Git Bash", vælg eventuelt "Git Bash", jeg har kunne læse mig til den fungere forholdsvis godt.
 2. Åben nu enten "Git Bash" eller "Command Prompt", og kør følgende kommandoer for at sætte dine brugeroplysninger op:
 
-```shell
+```Shell
+
 $ git config --global user.name "Emma Paris"`
 $ git config --global user.email "eparis@atlassian.com"
+
 ```
 
 _Du kan nu bruge Git på din Windows computer._
@@ -38,22 +41,28 @@ Ah ja, du har en ordentligt computer, baseret på UNIX, fuck hvor :bomb:'en.
 
 0. Åben først "Terminal" og kør følgende kommando:
 
-```shell
+```Shell
+
 $ git --version
+
 ```
 _Giver denne et ouput, er alt godt, og Git er installeret, du kan fortsætte til 2._
 
 1. Download [Git installationen](https://sourceforge.net/projects/git-osx-installer/files/) og gennemfør installations forløbet.
 
-```shell
+```Shell
+
 $ git config --global user.name "Emma Paris"`
 $ git config --global user.email "eparis@atlassian.com"
+
 ```
 2. Åben nu "Terminal", og kør følgende kommandoer for at sætte dine brugeroplysninger op:
 
-```shell
+```Shell
+
 $ git config --global user.name "Emma Paris"
 $ git config --global user.email "eparis@atlassian.com"
+
 ```
 
 _Du kan nu bruge Git på din MacOS computer._
