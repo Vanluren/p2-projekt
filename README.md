@@ -50,12 +50,6 @@ _Giver denne et ouput, er alt godt, og Git er installeret, du kan fortsætte til
 
 1. Download [Git installationen](https://sourceforge.net/projects/git-osx-installer/files/) og gennemfør installations forløbet.
 
-```Shell
-
-$ git config --global user.name "Emma Paris"
-$ git config --global user.email "eparis@atlassian.com"
-
-```
 2. Åben nu "Terminal", og kør følgende kommandoer for at sætte dine brugeroplysninger op:
 
 ```Shell
