@@ -15,16 +15,16 @@
     <hr>
   </header>
 
-  <form id="form" method="post" action="insert.php" autocomplete="on">
+  <form id="form" method="post" action="checklogin.php" autocomplete="on">
 
     <div>
       <label>Brugernavn:</label>
-      <input type="text" required size="40" maxlength="60">
+      <input type="text" name="username" required size="40" maxlength="60">
     </div>
 
     <div>
       <label>Adgangskode:</label>
-      <input type="text" required size="40" maxlength="60">
+      <input type="text" name="password" required size="40" maxlength="60">
     </div>
 
     <div class="Knap">
@@ -32,7 +32,6 @@
 
     </div>
   </form>
-
 
   <footer>
     <button class="KnapAdmin" id="knapAdmin"><a href="mailto:Nørresundby@hej.dk">Kontakt Admin</a></button>
