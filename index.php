@@ -19,8 +19,19 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 </head>
 <body>
     <div class="page-header">
+
         <h1>Hej, <b><?php echo $_SESSION['username']; ?></b>. Velkommen til Broomie!</h1>
     </div>
-    <p><a href="login/logout.php" class="btn btn-danger">Log ud</a></p>
+
+
+
+
+
+
+    <div id="logout-button">
+        <p><a href="login/logout.php" class="btn btn-danger">Log ud</a></p>
+    </div>
+
+
 </body>
 </html>
