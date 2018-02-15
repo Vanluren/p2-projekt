@@ -3,8 +3,22 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
+
+.centerImage{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.wrapper{
+  width: 350px;
+  padding: 20px;
+  width: ...;
+  margin: 0 auto;
+ }
+
 body {
   margin: 0;
+  font: 14px sans-serif;
 }
 article,
 aside,
@@ -6748,4 +6762,3 @@ button.close {
     display: none !important;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */

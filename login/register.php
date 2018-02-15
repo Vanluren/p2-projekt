@@ -99,13 +99,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <title>Registrering</title>
     <link rel="stylesheet" type="text/css" href="css/css.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px; }
-    </style>
+
 </head>
 <body>
     <div class="wrapper">
+      <img src="logo/logo_broomie.png" class="centerImage" alt="Broomie Logo" width="80%">
         <h2>Registrer dig!</h2>
         <p>Udfyld denne form for at oprette dig en bruger.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

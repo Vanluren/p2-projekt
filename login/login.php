@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             save the username to the session */
                             session_start();
                             $_SESSION['username'] = $username;
-                            header("location: welcome.php");
+                            header("location: dashboard.php");
                         } else{
                             // Display an error message if password is not valid
                             $password_err = 'Forkert kodeord.';
@@ -80,13 +80,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="css/css.css">
-    <style type="text/css">
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 350px; padding: 20px; }
-    </style>
+
 </head>
 <body>
     <div class="wrapper">
+      <img src="logo/logo_broomie.png" class="centerImage" alt="Broomie Logo" width="80%">
         <h2>Login</h2>
         <p>Udfyld dine oplysninger for at logge ind.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

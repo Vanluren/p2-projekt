@@ -13,7 +13,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome</title>
+    <title>Broomie - Dashboard</title>
     <link rel="stylesheet" type="text/css" href="css/css.css">
     <style type="text/css">
         body{ font: 14px sans-serif; text-align: center; }
