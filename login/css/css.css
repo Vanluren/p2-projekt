@@ -17,6 +17,10 @@ html {
   margin-top: 5%;
   box-shadow: 0 0 10px #000;
   border:1px solid #000;
+  /* border-radius */
+ -webkit-border-radius: 20px;
+ -moz-border-radius: 20px;
+  border-radius: 20px;
  }
 
 body {
