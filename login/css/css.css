@@ -63,6 +63,7 @@ body {
     width: 33.33%;
     padding: 10px;
     border-right: 5px solid white;
+    border-bottom: 5px solid white;
     /* border-radius */
    -webkit-border-radius: 20px;
    -moz-border-radius: 20px;
