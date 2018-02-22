@@ -1,12 +1,12 @@
-- [Start her:](#)
-    - [Yarn/NPM](#)
-	- [PHP](#)
-	- [ Git ](#)
-- [ GitHub Setup Guide ](#)
-	- [Windows-installation ](#)
-	- [MacOS-installation](#)
-- [Sourcetree Setup](#)
-- [Yarn/NPM installation](#)
+- [Start her:](#start-her)
+	- [PHP](#php)
+	- [ Git ](#octocat-git-octocat)
+	- [Node.js og Yarn/NPM](#nodejs-og-yarnnpm)
+- [ GitHub Setup Guide ](#octocat-gitgithubsourcetree-setup-guide-octocat)
+	- [Windows-installation ](#poop-windows-installation-poop)
+	- [MacOS-installation](#raised_hands-macos-installation-raised_hands)
+    - [Sourcetree Setup](#sourcetree-setup)
+- [Yarn/NPM installation](#yarnnpm-installation)
 
 ## Start her: ##
 
