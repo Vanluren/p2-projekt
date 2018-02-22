@@ -5,15 +5,10 @@ var path = require('path'),
 
 
 module.exports = {
-  
   entry: getEntry(),
-
   output: getOutput(),
-  
   devtool: PRODUCTION ? false : 'inline-source-map',
-  
   target: 'web',
-
   module: {
     loaders: [
       {
@@ -24,9 +19,7 @@ module.exports = {
       },
     ]
   },
-  
   plugins: getPlugins()
-  
 };
 
 function getPlugins(){
@@ -65,7 +58,7 @@ function getOutput(){
   if (HOT) {
     return {
       path: PATHS.compiled(),
-      publicPath: PRODUCTION ? '/' : `http://${HOST}:${PORT}/wp-content/themes/${THEME_NAME}/`,
+      publicPath: PRODUCTION ? '/' : `http://${HOST}:${PORT}/${THEME_NAME}/`,
       filename: FILES.outputJs,
       sourceMapFilename: '[file].map',
     }

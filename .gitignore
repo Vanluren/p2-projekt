@@ -6,3 +6,4 @@ gen
 
 /.idea/
 /node_modules/
+/yarn.lock

@@ -15,7 +15,7 @@ var gulp = require('gulp'),
     webpackHotMiddleware = require('webpack-hot-middleware'),
     webpackConfig = require('./webpack.config'),
     bundler = webpack(webpackConfig),
-    { PRODUCTION, HOT, PROXY_TARGET, FILES, PATHS } = require('./env.config');
+    { PRODUCTION, HOT, PROXY_TARGET, FILES, PATHS, PORT } = require('./env.config');
 
 gulp.task('default', function() {
     gulp.start('styles');
@@ -28,12 +28,12 @@ gulp.task('serve', function() {
     gulp.start('styles');
 
     browserSync.init(
-    	getBrowserSyncOptions(openWindow = true)
+    	getBrowserSyncOptions()
     );
     
     gulp.watch(
-	    	['src/assets/css/scss/**/*.scss',
-		     'src/assets/css/scss/**/*.sass'],
+	    	['src/assets/styles/scss/**/*.scss',
+		     'src/assets/styles/scss/**/*.sass'],
 		    ['styles']
 	    );
     
@@ -51,7 +51,7 @@ gulp.task('serve', function() {
 gulp.task('resume', function() {   
 
     browserSync
-	    .init(getBrowserSyncOptions(openWindow = false));
+	    .init(getBrowserSyncOptions());
 
     gulp
 	    .watch(['src/sass/**/*.scss', 'src/sass/**/*.sass'], ['styles']);
@@ -92,26 +92,24 @@ gulp.task('styles', function () {
     buildSass()
 });
 
-function getBrowserSyncOptions(openwindow){
-
+function getBrowserSyncOptions(){
     return {
-        open: openWindow ? true : false,
         notify: false,
         ghostMode: true,
         proxy:  HOT ? {
             // proxy local WP install
-            target: PROXY_TARGET,
+            target: 'http://localhost:'+ PORT + PROXY_TARGET,
 
             middleware: [
                 // converts browsersync into a webpack-dev-server
                 webpackDevMiddleware(bundler, {
                     publicPath: webpackConfig.output.publicPath,
                 }),
-                // hot update js && css
+                // hot update js && styles
                     webpackHotMiddleware(bundler),
             ],
         } : PROXY_TARGET,
-	    port: 8888
+	    port: PORT
     }
 }
 
