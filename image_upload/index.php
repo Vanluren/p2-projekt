@@ -1,4 +1,15 @@
 <?php
+// Initialize the session
+session_start();
+
+// If session variable is not set it will redirect to login page
+if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
+  header("Location: ../login/login.php");
+  exit;
+}
+?>
+
+<?php
   // Create database connection
   $db = mysqli_connect("178.62.198.246", "broomie", "broomie", "test");
 
