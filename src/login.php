@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             save the username to the session */
                             session_start();
                             $_SESSION['username'] = $username;
-                            header("Location: ../index.php");
+                            header("Location: index.php");
                         } else{
                             // Display an error message if password is not valid
                             $password_err = 'Forkert kodeord.';
@@ -72,19 +72,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Close connection
     mysqli_close($link);
 }
+
+include 'modules/header.php'
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="css/css.css">
-
-</head>
 <body>
     <div class="wrapper">
-      <img src="logo/logo_broomie.png" class="centerImage" alt="Broomie Logo" width="80%">
+      <img src="assets/images/logo_broomie.png" class="centerImage" alt="Broomie Logo" width="80%">
         <h2>Login</h2>
         <p>Udfyld dine oplysninger for at logge ind.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -104,5 +98,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <p>Ikke oprettet endnu? <a href="register.php">Opret dig her</a>.</p>
         </form>
     </div>
-</body>
-</html>
+
+<?php
+include '../modules/footer.php'
+?>
