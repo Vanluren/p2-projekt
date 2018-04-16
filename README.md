@@ -1,3 +1,13 @@
+- [Start her:](#start-her)
+	- [PHP](#php)
+	- [ Git ](#octocat-git-octocat)
+	- [Node.js og Yarn/NPM](#nodejs-og-yarnnpm)
+- [ GitHub Setup Guide ](#octocat-gitgithubsourcetree-setup-guide-octocat)
+	- [Windows-installation ](#poop-windows-installation-poop)
+	- [MacOS-installation](#raised_hands-macos-installation-raised_hands)
+    - [Sourcetree Setup](#sourcetree-setup)
+- [Yarn/NPM installation](#yarnnpm-installation)
+
 ## Start her: ##
 
 ### PHP ###
@@ -12,7 +22,12 @@ Til at arbejde med PHP er der en række programmer der med fordel kan bruges. Et
 
 Git kan bruges fra "Command Prompt" i windows, fra "Terminal" i MacOS og det kan repræsenteres visuelt via dedikerede programmer som f.eks. "Sourcetree".
 
-## :octocat: GitHub Setup Guide :octocat: ##
+### Node.js og Yarn/NPM ###
+Node.js er det nyeste nye i web-udvikling. Node.js kan vi bruge til at optimere vores udviklings miljø.
+
+Yarn og NPM er systemer der gør det samme - de giver udviklere mulighed for at installere pakker fra Node.js store bibliotek af pakker. Pakkerne er udviklet af andre udviklere.
+
+## :octocat: Git/GitHub/Sourcetree Setup Guide :octocat: ##
 
 1. Lav en bruger på [GitHub](https://github.com/join?source=header-home)
     1. På [GitHub Education](https://education.github.com/) kan man få en masse lækre sager, hvis man tilknytter noget bevis for at man er studerende. Det kan varmt anbefales.
@@ -27,10 +42,8 @@ Git kan bruges fra "Command Prompt" i windows, fra "Terminal" i MacOS og det kan
 2. Åben nu enten "Git Bash" eller "Command Prompt", og kør følgende kommandoer for at sætte dine brugeroplysninger op:
 
 ```Shell
-
 $ git config --global user.name "Emma Paris"`
 $ git config --global user.email "eparis@atlassian.com"
-
 ```
 
 _Du kan nu bruge Git på din Windows computer._
@@ -42,9 +55,7 @@ Fedt, du har en ordentligt computer baseret på UNIX, fuck hvor :bomb:en.
 0. Åben først "Terminal" og kør følgende kommando:
 
 ```Shell
-
 $ git --version
-
 ```
 _Giver denne et ouput, er alt godt, og Git er installeret, du kan fortsætte til 2._
 
@@ -53,22 +64,16 @@ _Giver denne et ouput, er alt godt, og Git er installeret, du kan fortsætte til
 2. Åben nu "Terminal", og kør følgende kommandoer for at sætte dine brugeroplysninger op:
 
 ```Shell
-
 $ git config --global user.name "Emma Paris"
 $ git config --global user.email "eparis@atlassian.com"
-
 ```
 
 _Du kan nu bruge Git på din MacOS computer._
 
-## Sourcetree Setup ##
+### Sourcetree Setup ###
 
 1. Download installeren fra [Sourcetrees hjemmeside](https://www.sourcetreeapp.com/) og gennemfør denne
 
-## Næste trin: ##
+## Yarn/NPM installation ##
 
-I din terminal skal du nu udfører følgende kommando:
-
-```Shell
-$ git checkout git-commands
-```
+Du kan installere Yarn vedhjælp af en installations gennemgang der findes [her](https://yarnpkg.com/lang/en/docs/install/).
