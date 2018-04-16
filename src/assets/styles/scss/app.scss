@@ -9,4 +9,6 @@ body {
 	font: 14px sans-serif;
 }
 
-@import "views/login";
+@import
+	"views/login",
+	"views/image_upload";
