@@ -5,11 +5,11 @@
 
 	// If session variable is not set it will redirect to login page
 	if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
-	    header("Location: login.php");
+	    header("Location: src/login.php");
 	    exit;
 	}
 
-include 'modules/header.php'
+include 'src/modules/header.php'
 ?>
 
 	<div class="page-header">
@@ -39,9 +39,9 @@ include 'modules/header.php'
 
 
 	<div id="logout-button">
-		<p><a href="logout.php" class="btn btn-danger">Log ud</a></p>
+		<p><a href="src/logout.php" class="btn btn-danger">Log ud</a></p>
 	</div>
 
 <?php
-include 'footer.php'
+include 'src/modules/footer.php'
 ?>
