@@ -4,7 +4,7 @@ session_start();
 
 // If session variable is not set it will redirect to login page
 if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
-  header("Location: ../login/login.php");
+  header("Location: src/login.php");
   exit;
 }
 ?>
@@ -24,7 +24,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
   	$image_text = mysqli_real_escape_string($db, $_POST['image_text']);
 
   	// image file directory
-  	$target = "images/".basename($image);
+  	$target = "../uploads/images/".basename($image);
 
   	$sql = "INSERT INTO images (image, image_text) VALUES ('$image', '$image_text')";
   	// execute query
@@ -37,26 +37,20 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
   	}
   }
   $result = mysqli_query($db, "SELECT * FROM images");
-?>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Tilføj billede</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-</head>
-<body>
+  include 'modules/header.php';
+?>
 <div id="content">
   <?php
     while ($row = mysqli_fetch_array($result)) {
       echo "<div id='img_div'>";
-      	echo "<img src='images/".$row['image']."' >";
+      	echo "<img src='../uploads/images/".$row['image']."' >";
       	echo "<p>".$row['image_text']."</p>";
       echo "</div>";
     }
   ?>
-  <form method="POST" action="index.php" enctype="multipart/form-data">
+
+  <form method="POST" action="image_upload.php" enctype="multipart/form-data">
   	<input type="hidden" name="size" value="1000000">
   	<div>
   	  <input type="file" name="image">
@@ -74,5 +68,5 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
   	</div>
   </form>
 </div>
-</body>
-</html>
+
+<?php include 'modules/footer.php';?>
