@@ -43,7 +43,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
 <head>
     <meta charset="UTF-8">
     <title>Tilføj billede</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel='stylesheet' href='../src/assets/styles/scss/views/_image_upload.scss'>
 
 </head>
 <body>

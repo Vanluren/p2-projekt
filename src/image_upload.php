@@ -24,7 +24,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
   	$image_text = mysqli_real_escape_string($db, $_POST['image_text']);
 
   	// image file directory
-  	$target = "../uploads/images/".basename($image);
+  	$target = "../image_upload/images/".basename($image);
 
   	$sql = "INSERT INTO images (image, image_text) VALUES ('$image', '$image_text')";
   	// execute query
@@ -44,7 +44,7 @@ if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
   <?php
     while ($row = mysqli_fetch_array($result)) {
       echo "<div id='img_div'>";
-      	echo "<img src='../uploads/images/".$row['image']."' >";
+      	echo "<img src='../image_upload/images/".$row['image']."' >";
       	echo "<p>".$row['image_text']."</p>";
       echo "</div>";
     }
