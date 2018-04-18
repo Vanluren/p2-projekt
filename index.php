@@ -17,7 +17,6 @@ include 'src/modules/header.php'
 
 	<div class="page-header">
 
-		<h1>Hej, <b><?php echo $_SESSION['username']; ?></b>. Velkommen til Broomie!</h1>
 	</div>
 
 
