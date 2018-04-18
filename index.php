@@ -11,6 +11,9 @@
 
 include 'src/modules/header.php'
 ?>
+<head>
+	  <link rel='stylesheet' href='src/assets/styles/scss/views/_login.scss'>
+</head>
 
 	<div class="page-header">
 
