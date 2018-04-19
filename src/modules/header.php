@@ -7,11 +7,15 @@
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
       <link rel="stylesheet" href="./public/styles/app.css">
       <link rel='stylesheet' href='./public/styles/header.css'>
+      <link rel='stylesheet' href='./public/styles/main-menu.css'>
+      <link rel='stylesheet' href='./public/styles/vice-sidebar.css'>
+      <link rel='stylesheet' href='./public/styles/footer.css'>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 	<title>Nørresundby boligselskab</title>
 </head>
 
 <body>
+  <!-- Header container åben -->
   <div class="container-fluid header__container">
       <div class="col-sm-4">
         <div class="header-left__container">
@@ -31,3 +35,4 @@
         </div>
       </div>
   </div>
+<!-- Header container luk -->

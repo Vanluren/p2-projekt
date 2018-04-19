@@ -1,0 +1,10 @@
+.footer__wrapper{
+
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: lightgrey;
+}
