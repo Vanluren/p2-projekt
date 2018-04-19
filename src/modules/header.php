@@ -5,22 +5,25 @@
     <meta name='viewport'
           content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
     <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-    <link rel='stylesheet' href='../src/assets/styles/scss/views/_header.scss'>
+    <link rel='stylesheet' href='public\styles\header.css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 	<title>Nørresundby boligselskab</title>
+</head>
 
-  <div class="container">
+<body>
+  <div class="container-fluid header__container ">
 
-    <div style="align-items: left;">
+    <div class="header-left__container">
         <a href="index.php">
         <img src="../src/assets/images/nsb_logo.png">
         </a>
     </div>
 
-    <div style="align-items: center;">
+    <div class="header-mid__container">
       <h2>Velkommen <b><?php echo $_SESSION['username']; ?></h2>
     </div>
 
-    <div style="align-items: right;">
+    <div class="header-right__container">
       <?php include 'src/modules/right_head.php' ?>
     </div>
 
