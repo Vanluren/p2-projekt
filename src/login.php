@@ -73,12 +73,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     mysqli_close($link);
 }
 
-include 'modules/header.php'
+//include 'modules/header.php'
 ?>
 
+<header>
+  <link rel="stylesheet" href="../public/styles/app.css">
+</header>
 <body>
     <div class="wrapper">
-      <img src="assets/images/logo_broomie.png" class="centerImage" alt="Broomie Logo" width="80%">
+      <img src="assets/images/nsb_logo.png" class="centerImage" alt="Broomie Logo" width="80%">
         <h2>Login</h2>
         <p>Udfyld dine oplysninger for at logge ind.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
