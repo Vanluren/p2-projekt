@@ -9,7 +9,7 @@
       <link rel='stylesheet' href='./public/styles/header.css'>
       <link rel='stylesheet' href='./public/styles/main-menu.css'>
       <link rel='stylesheet' href='./public/styles/vice-sidebar.css'>
-      <link rel='stylesheet' href='./public/styles/footer.css'>
+      <link rel='stylesheet' href='./public/styles/vice-sidebar.css'>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 	<title>Nørresundby boligselskab</title>
 </head>
@@ -36,3 +36,7 @@
       </div>
   </div>
 <!-- Header container luk -->
+
+
+<div class="container-fluid"><!-- <div> Index container-fluid åben -->
+  <div class="row"><!-- <div> Index row åben -->
