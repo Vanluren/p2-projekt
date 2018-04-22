@@ -1,5 +1,4 @@
 <?php
-
 // Include config file
 require_once 'config.php';
 
@@ -95,6 +94,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 //include 'header.php'
 
 ?>
+<header>
+  <link rel="stylesheet" href="../public/styles/app.css">
+</header>
 	<div class="wrapper">
         <h2>Registrer dig!</h2>
         <p>Udfyld denne form for at oprette dig en bruger.</p>
