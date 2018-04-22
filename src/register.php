@@ -1,4 +1,5 @@
 <?php
+
 // Include config file
 require_once 'config.php';
 
@@ -34,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     $username = trim($_POST["username"]);
                 }
             } else{
-                echo "Ups... Noget gik galt! Prøv igen senere.";
+                echo "Ups... Noget gik galt! Prøv igen senere. 1";
             }
         }
 
@@ -65,7 +66,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
 
         // Prepare an insert statement
-        $sql = "INSERT INTO nsb (username, password) VALUES (?, ?)";
+        $sql = "INSERT INTO loginb (username, password) VALUES (?, ?)";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -80,7 +81,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // Redirect to login page
                 header("location: login.php");
             } else{
-                echo "Ups... Noget gik galt! Prøv igen senere.";
+                echo "Ups... Noget gik galt! Prøv igen senere. 2";
             }
         }
 
@@ -91,10 +92,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Close connection
     mysqli_close($link);
 }
-include 'header.php'
+//include 'header.php'
+
 ?>
 	<div class="wrapper">
-      <img src="assets/images/logo_broomie.png" class="centerImage" alt="Broomie Logo" width="80%">
         <h2>Registrer dig!</h2>
         <p>Udfyld denne form for at oprette dig en bruger.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -121,5 +122,5 @@ include 'header.php'
         </form>
     </div>
 <?php
-include 'footer.php'
+include 'modules/footer.php'
 ?>
