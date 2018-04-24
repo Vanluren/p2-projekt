@@ -13,6 +13,7 @@
 <body>
   <!-- Header container åben -->
   <div class="container-fluid header__container">
+    <div class="row">
       <div class="col-sm-4">
         <div class="header-left__container">
             <a href="index.php">
@@ -30,5 +31,6 @@
           <?php include 'src/modules/vice_header.php' ?>
         </div>
       </div>
+    </div>
   </div>
 <!-- Header container luk -->
