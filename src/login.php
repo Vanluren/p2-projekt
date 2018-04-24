@@ -25,8 +25,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
-        // Prepare a select statement
-        $sql = "SELECT username, password FROM loginb WHERE username = ?";
+      $radio_val = $_POST['radio'];
+
+            // Prepare a select statement
+        if ($radio_val == 'vicevaert') {
+            $sql = "SELECT username, password FROM loginv WHERE username = ?";
+        }else {
+          $sql = "SELECT username, password FROM loginb WHERE username = ?";
+
+        }
+
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -44,12 +52,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 if(mysqli_stmt_num_rows($stmt) == 1){
                     // Bind result variables
                     mysqli_stmt_bind_result($stmt, $username, $hashed_password);
+
                     if(mysqli_stmt_fetch($stmt)){
+
                         if(password_verify($password, $hashed_password)){
                             /* Password is correct, so start a new session and
                             save the username to the session */
+
                             session_start();
+
                             $_SESSION['username'] = $username;
+                            $_SESSION['user-type'] = $radio_val;
+
                             header("Location: ../index.php");
                         } else{
                             // Display an error message if password is not valid
@@ -98,12 +112,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                   <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                       <label>Kodeord</label>
                       <input type="password" name="password" class="form-control">
+                      <input type="radio" name="radio" value="vicevaert" checked=""> Vicevært<br>
+                      <input type="radio" name="radio" value="beboer"> Beboer<br>
                       <span class="help-block"><?php echo $password_err; ?></span>
                   </div>
                   <div class="form-group">
                       <input type="submit" class="btn btn-primary" value="Log ind">
                   </div>
-                  <p>Ikke oprettet endnu? <a href="register.php">Opret dig her</a>.</p>
               </form>
           </div>
         </div>
