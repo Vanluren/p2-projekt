@@ -12,9 +12,11 @@ body {
 @import
 	"views/login",
 	"views/logout",
-	"views/image_upload";
+	"views/image_upload",
+	"views/skade-anmeldelse";
 
 @import
 	"modules/footer",
 	"modules/header",
-	"modules/vice-sidebar";
+	"modules/vice-sidebar",
+	"modules/beboer_menu";
