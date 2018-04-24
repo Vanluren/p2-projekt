@@ -35,7 +35,7 @@
       </div>
       <div class="vice-sidebar__item">
         <div class="vice-sidebar__link">
-          <a href="src/logout.php" class="btn btn-danger">Log ud</a>
+          <a href="./src/logout.php" class="btn btn-danger">Log ud</a>
         </div>
       </div>
     </div>
