@@ -4,9 +4,9 @@ module.exports = {
   PRODUCTION: false,
   HOT: true,
   THEME_NAME: 'Broomie',
-  PROXY_TARGET: //TODO: INDSÆT DIN EGEN PATH HER,
+  PROXY_TARGET: '/SkoleProjekter/p2-projekt/src/',
   HOST: 'localhost',
-  PORT: //TODO: INDSÆT DIN EGEN PORT HER,
+  PORT: 8888,
   FILES: {
     inputJs: './src/assets/js/app.js',
     outputJs: 'app.compiled.js',

@@ -26,7 +26,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT username, password FROM users WHERE username = ?";
+        $sql = "SELECT username, password FROM loginb WHERE username = ?";
 
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -73,32 +73,43 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     mysqli_close($link);
 }
 
-include 'modules/header.php'
+//include 'modules/header.php'
 ?>
 
+<head>
+  <link rel="stylesheet" href="../public/styles/app.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
 <body>
-    <div class="wrapper">
-      <img src="assets/images/logo_broomie.png" class="centerImage" alt="Broomie Logo" width="80%">
-        <h2>Login</h2>
-        <p>Udfyld dine oplysninger for at logge ind.</p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                <label>Brugernavn</label>
-                <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
-                <span class="help-block"><?php echo $username_err; ?></span>
-            </div>
-            <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                <label>Kodeord</label>
-                <input type="password" name="password" class="form-control">
-                <span class="help-block"><?php echo $password_err; ?></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Log ind">
-            </div>
-            <p>Ikke oprettet endnu? <a href="register.php">Opret dig her</a>.</p>
-        </form>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+          <div class="login__wrapper">
+            <img src="assets/images/nsb_logo.png" class="centerImage" alt="Broomie Logo" width="80%">
+              <h2>Login</h2>
+              <p>Udfyld dine oplysninger for at logge ind.</p>
+              <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                  <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                      <label>Brugernavn</label>
+                      <input type="text" name="username"class="form-control" value="<?php echo $username; ?>">
+                      <span class="help-block"><?php echo $username_err; ?></span>
+                  </div>
+                  <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                      <label>Kodeord</label>
+                      <input type="password" name="password" class="form-control">
+                      <span class="help-block"><?php echo $password_err; ?></span>
+                  </div>
+                  <div class="form-group">
+                      <input type="submit" class="btn btn-primary" value="Log ind">
+                  </div>
+                  <p>Ikke oprettet endnu? <a href="register.php">Opret dig her</a>.</p>
+              </form>
+          </div>
+        </div>
+      </div>
     </div>
-
+  </div>
 <?php
-include '../modules/footer.php'
+include 'modules/footer.php'
 ?>

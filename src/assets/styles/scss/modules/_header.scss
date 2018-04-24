@@ -1,0 +1,44 @@
+.header__container {
+  background-color: lightgrey;
+  border-bottom: 2px solid;
+  border-color: black;
+}
+
+// .header__container > .col-sm-4{
+//   height: 100%;
+// }
+
+.header-left__container{
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-left_image{
+  width: 170px;
+  height: auto;
+}
+
+.header-mid_container{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.header-mid__text{
+  font-size: 40px;
+}
+
+.header-mid__text--bold{
+  font-weight: bold;
+}
+
+.header-right__container{
+  height: 100%;
+  display: flex;
+  text-align: right;
+  justify-content: flex-end;
+  align-items: center;
+}
