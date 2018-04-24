@@ -2,7 +2,7 @@
 
 <!-- Begin footer -->
 
-		<footer class="footer__wrapper">
+<footer class="footer__wrapper">
 			<div class="footer__adrress-wrapper">
 				<p class="footer__text">
 					Nørresundby Boligselskab
@@ -13,7 +13,7 @@
 					info@nrsbbolig.dk
 			</p>
 		</div>
-		</footer>
+</footer>
 	<script rel='application/javascript' src="../public/js/app.compiled.js"></script>
 </body>
 </html>
