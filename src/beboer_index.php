@@ -4,5 +4,7 @@
 
       <?php include 'modules/beboer_menu.php'; ?>
 
+      <a href="./src/logout.php" class="btn btn-danger">Log ud</a>
+
   </div>
 </div><!-- Index container-fluid luk -->

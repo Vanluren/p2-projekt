@@ -40,6 +40,37 @@
 
   }
 
- ?>
+        // Prepare a select statement
+        if ($radio_val == 'vicevaert') {
 
-<h2>Din afdeling: <?php echo $_SESSION['department']; ?></h2>
+            echo $_SESSION['department'];
+
+            }else {
+
+                $sql = "SELECT name, phone, email FROM loginv WHERE department_v = $department";
+                $result = mysqli_query($link, $sql);
+
+
+                echo "<table border='0'>
+                  <tr>
+                  <th>Navn</th>
+                  <th>Telefon</th>
+                  <th>Email</th>
+                  </tr>";
+
+                    while($row = mysqli_fetch_array($result))
+                      {
+                        echo "<tr>";
+                        echo "<td>" . $row['name'] . "</td>";
+                        echo "<td>" . $row['phone'] . "</td>";
+                        echo "<td>" . $row['email'] . "</td>";
+                        echo "</tr>";
+                      }
+                      echo "</table>";
+              
+
+                      mysqli_close($link);
+
+}
+
+ ?>
