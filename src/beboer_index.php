@@ -4,7 +4,5 @@
 
       <?php include 'modules/beboer_menu.php'; ?>
 
-      <?php var_dump($_SESSION) ?>
-
   </div>
 </div><!-- Index container-fluid luk -->

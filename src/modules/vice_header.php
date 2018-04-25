@@ -28,8 +28,6 @@
 
         mysqli_stmt_bind_result($stmt, $department);
 
-
-
         if(mysqli_stmt_fetch($stmt)){
 
           session_start();
@@ -44,4 +42,4 @@
 
  ?>
 
-<h2><?php echo $_SESSION?></h2>
+<h2>Din afdeling: <?php echo $_SESSION['department']; ?></h2>
