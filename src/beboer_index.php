@@ -1,8 +1,10 @@
 
 <div class="container-fluid"><!-- <div> Index container-fluid åben -->
-  <div class="row"><!-- <div> Index row åben -->
-	<div class="col-sm-12">
-    <h2><?php echo "tissekone"; ?></h2>
-	</div> <!-- <div> Index row luk -->
-</div>
+  <div class="container">
+
+      <?php include 'modules/beboer_menu.php'; ?>
+
+      <a href="./src/logout.php" class="btn btn-danger">Log ud</a>
+
+  </div>
 </div><!-- Index container-fluid luk -->
