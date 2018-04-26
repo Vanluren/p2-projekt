@@ -1,9 +1,7 @@
 <?php
-
-
   $department = 0;
   $username = $_SESSION['username'];
-  $sql_stmt = "SELECT department_b FROM loginb WHERE username = ?";
+
 
   define('DB_SERVER', '178.62.198.246');
   define('DB_USERNAME', 'broomie');
@@ -13,6 +11,12 @@
   /* Attempt to connect to MySQL database */
   $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
+  if($_SESSION['user-type'] == 'beboer'){
+    $sql_stmt = "SELECT department FROM loginb WHERE username = ?";
+  }else {
+    $sql_stmt = "SELECT department FROM loginv WHERE username = ?";
+  }
+  
   if($stmt = mysqli_prepare($link, $sql_stmt)){
     // Bind variables to the prepared statement as parameters
     mysqli_stmt_bind_param($stmt, "s", $param_username);
@@ -67,7 +71,7 @@
                         echo "</tr>";
                       }
                       echo "</table>";
-              
+
 
                       mysqli_close($link);
 
