@@ -20,7 +20,7 @@ include_once 'config.php';
 
     <?php
       if(mysqli_num_rows($result) >0):
-        while ($row = mysqli_fetch_assoc($result)):.
+        while ($row = mysqli_fetch_assoc($result)):
      ?>
      <a href="src/ticket_view.php?ticket=<?php echo $row['ticket_id']; ?>">
        <div class="row">
