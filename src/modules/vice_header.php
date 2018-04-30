@@ -33,7 +33,7 @@
                         echo "<td>" . $row['name'] . "</td>";
                         echo "<td>" . $row['phone'] . "</td>";
                         echo "<td>" . $row['email'] . "</td>";
-                        echo '<td><img src="' . $row['photo'] . '" /></td>';
+                        echo '<td><img src="'.ROOT_PATH.'/'.$row['photo'] . '" /></td>';
 
 
 
