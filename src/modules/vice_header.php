@@ -69,7 +69,7 @@
                         echo "<td>" . $row['phone'] . "</td>";
                         echo "<td>" . $row['email'] . "</td>";
                         echo '<td><img src="' . $row['photo'] . '" /></td>';
-                        
+
 
 
                         echo "</tr>";
