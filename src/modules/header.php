@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(!isset($_SESSION['username']) && empty($_SESSION['username'])){
+    header('location:src/login.php'); // redirect to login page if user details is not set in sessions
+}
 //Vi finder request url'en
 $REQ_URI = $_SERVER['REQUEST_URI'];
 //deler hvert led ind i et array
@@ -54,7 +58,7 @@ if(in_array('src',$REQ_URI_EXPL)){
       </div>
       <div class="col-sm-4">
         <div class="header-right__container">
-          <?php include 'src/modules/vice_header.php' ?>
+          <?php include 'vice_header.php' ?>
         </div>
       </div>
     </div>

@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         if ($radio_val == 'vicevaert') {
             $sql = "SELECT username, password FROM loginv WHERE username = ?";
         }else {
-          $sql = "SELECT username, password FROM loginb WHERE username = ?";
+          $sql = "SELECT username, password, department FROM loginb WHERE username = ?";
 
         }
 
@@ -51,7 +51,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // Check if username exists, if yes then verify password
                 if(mysqli_stmt_num_rows($stmt) == 1){
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $username, $hashed_password);
+                    mysqli_stmt_bind_result($stmt, $username, $hashed_password, $department);
 
                     if(mysqli_stmt_fetch($stmt)){
 
@@ -63,8 +63,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                             $_SESSION['username'] = $username;
                             $_SESSION['user-type'] = $radio_val;
+                            $_SESSION['department'] = $department;
 
-                            header("Location: ../index.php");
+                            header("Location: ../");
                         } else{
                             // Display an error message if password is not valid
                             $password_err = 'Forkert kodeord.';
