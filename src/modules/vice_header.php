@@ -3,7 +3,7 @@
 
   $department = 0;
   $username = $_SESSION['username'];
-  $sql_stmt = "SELECT department_b FROM loginb WHERE username = ?";
+  $sql_stmt = "SELECT department FROM loginb WHERE username = ?";
 
   define('DB_SERVER', '178.62.198.246');
   define('DB_USERNAME', 'broomie');
@@ -47,8 +47,10 @@
 
             }else {
 
-                $sql = "SELECT name, phone, email FROM loginv WHERE department_v = $department";
+                $sql = "SELECT name, phone, email, photo FROM loginv WHERE department = $department";
                 $result = mysqli_query($link, $sql);
+
+
 
 
                 echo "<table border='0'>
@@ -56,18 +58,24 @@
                   <th>Navn</th>
                   <th>Telefon</th>
                   <th>Email</th>
+                  <th>Billede</th>
                   </tr>";
 
                     while($row = mysqli_fetch_array($result))
                       {
+
                         echo "<tr>";
                         echo "<td>" . $row['name'] . "</td>";
                         echo "<td>" . $row['phone'] . "</td>";
                         echo "<td>" . $row['email'] . "</td>";
+                        echo '<td><img src="' . $row['photo'] . '" /></td>';
+                        
+
+
                         echo "</tr>";
                       }
                       echo "</table>";
-              
+
 
                       mysqli_close($link);
 
