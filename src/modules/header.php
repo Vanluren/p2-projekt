@@ -54,7 +54,7 @@ if(in_array('src',$REQ_URI_EXPL)){
       </div>
       <div class="col-sm-4">
         <div class="header-right__container">
-          <?php include 'src/modules/vice_header.php' ?>
+          <?php include 'vice_header.php' ?>
         </div>
       </div>
     </div>
