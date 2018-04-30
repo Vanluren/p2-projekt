@@ -4,7 +4,7 @@ module.exports = {
   PRODUCTION: false,
   HOT: true,
   THEME_NAME: 'Broomie',
-  PROXY_TARGET: '/SkoleProjekter/p2-projekt/src/',
+  PROXY_TARGET: '/SkoleProjekter/p2-projekt/',
   HOST: 'localhost',
   PORT: 8888,
   FILES: {

@@ -19,7 +19,7 @@ if(in_array('src',$REQ_URI_EXPL)){
 }else{
     //hvis ikke src findes i arrayet, ved vi at vi er i root-folderen
     //så vi sætter globale variabler til den nuværende sti.
-    define('ROOT_PATH',$REQ_URI);
+    define('ROOT_PATH',$REQ_URI.'/public/styles/app.css');
     define('CSS_PATH',$REQ_URI.'/public/styles/app.css');
 }
 ?>
