@@ -1,8 +1,8 @@
 <?php
     // Include config file
-    require_once 'config.php';
+	require_once '../config/config.php';
 
-  if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 
       $mysqli = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
@@ -56,9 +56,7 @@
         mysqli_stmt_execute($stmt);
           /* close connection */
         mysqli_close($link);
-
-      }
-
+    }
   include 'modules/header.php';
 ?>
 

@@ -1,22 +1,18 @@
 <?php
-
 $ordervalue = 'created_at';
 $curr_department = $_SESSION['department'];
 $sql_stmt = "SELECT * FROM ticket WHERE department = $curr_department ORDER BY $ordervalue";
-$lejlighed_num = 0;
 
-include_once 'config.php';
+require_once CONFIG_PATH'/config.php';
 
     $result = mysqli_query($link, $sql_stmt);
  ?>
-
-
-
 <div class="container-fluid"><!-- <div> Index container-fluid åben -->
   <div class="row"><!-- <div> Index row åben -->
 		<!-- Sidebar menu -->
 	<?php include 'src/modules/vice_sidebar-menu.php'; ?>
 	<!-- Sidebar luk -->
+
 	<div class="col-sm offset-sm-1">
 
     <form action="" method="post">
