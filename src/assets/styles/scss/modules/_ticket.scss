@@ -1,0 +1,62 @@
+.ticket{
+	display: flex;
+	flex-direction: row;
+	background-color: lightgray;
+	padding: 40px;
+	width: 100%;
+	margin-top: 30px;
+	font-size: 18px;
+	text-decoration: none;
+	-webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+	-moz-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+	box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+	color: #007bff;
+	&__link{
+		text-decoration: none;
+		&:hover{
+			color: #007bff;
+			text-decoration: none}
+	}
+	&__wrapper{
+		&--left, &--right{
+			display: flex;
+			flex-direction: column;
+		}
+		&--left{
+			justify-self: flex-start;
+			width: 80%;
+		}
+
+		&--right{
+			justify-self: flex-end;
+		}
+	}
+
+	&__prioritering{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+	&__bubble{
+		height: 15px;
+		width: 15px;
+		border-radius: 50%;
+		margin: 5px;
+		&.yellow{
+		background-color: yellow;
+		}
+		&.red{
+			background-color: red;
+		}
+		&.green{
+		background-color: lightgreen;
+		}
+	}
+
+	&:hover{
+		-webkit-box-shadow: 0 12px 15px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,.19);
+		-moz-box-shadow: 0 12px 15px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,.19);
+		box-shadow: 0 12px 15px 0 rgba(0,0,0,.24), 0 17px 50px 0 rgba(0,0,0,.19);
+	}
+}
+
