@@ -29,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             // Prepare a select statement
         if ($radio_val == 'vicevaert') {
-            $sql = "SELECT username, password FROM loginv WHERE username = ?";
+            $sql = "SELECT username, password, department FROM loginv WHERE username = ?";
         }else {
           $sql = "SELECT username, password, department FROM loginb WHERE username = ?";
 
