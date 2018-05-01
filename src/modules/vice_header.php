@@ -18,30 +18,23 @@
                 $sql = "SELECT name, phone, email, photo FROM loginv WHERE department = $department";
                 $result = mysqli_query($link, $sql);
 
-                echo "<table border='0'>
-                  <tr>
-                  <th>Navn</th>
-                  <th>Telefon</th>
-                  <th>Email</th>
-                  <th>Billede</th>
-                  </tr>";
-
-                    while($row = mysqli_fetch_array($result))
-                      {
-
-                        echo "<tr>";
-                        echo "<td>" . $row['name'] . "</td>";
-                        echo "<td>" . $row['phone'] . "</td>";
-                        echo "<td>" . $row['email'] . "</td>";
-                        echo '<td><img src="'.ROOT_PATH.'/'.$row['photo'] . '" /></td>';
-
-
-
-                        echo "</tr>";
-                      }
-                      echo "</table>";
-
-
+                    while($row = mysqli_fetch_array($result)): ?>
+                        <div class='row'>
+                            <div class='col-7 offset-1'>
+                                <div class='vice-header__wrapper'>
+                                    <div class='vice-header__info'><span>Navn:</span><?php echo $row['name']?></div>
+                                    <div class='vice-header__info'><span>TLF.:</span><?php echo $row['phone']?></div>
+                                    <div class='vice-header__info'><span>Email:</span><?php echo $row['email']?></div>
+                                </div>
+                            </div>
+                            <div class='col-4'>
+                                <div class='vice-header__photo'>
+                                    <img src="<?php echo ROOT_PATH.'/'.$row['photo']?>" />
+                                </div>
+                            </div>
+                        </div>
+<?php
+            endwhile;
                       mysqli_close($link);
-
-}
+    }
+?>
