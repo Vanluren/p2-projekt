@@ -22,7 +22,7 @@
                                          department,
                                          creater_id,
                                          address) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
-                                         
+
         $stmt = mysqli_prepare($link, $sql_stmt);
 
         $beskrivelse_string = $_POST['beskrivelse'];
@@ -31,7 +31,7 @@
         $navn_string = $_POST['navn'];
         $tlf_int = $_POST['telefon'];
         $email_string = $_POST['email'];
-        $image_path_string="";
+        $image_path_string = $_POST['picture'];
         $department_int = 00;
         $beboer_id_int=1;
         $addresse_string = "";
@@ -63,7 +63,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
-      <form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="skade__form-wrapper">
+      <form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" class="skade__form-wrapper" enctype="multipart/form-data">
         <?php
           include 'modules/lokalisering-input.php';
 
@@ -75,7 +75,7 @@
 
           include 'modules/kontakt-oplysninger-input.php'
         ?>
-      <input type="submit" value="Send andmeldelse">
+      <input type="submit" value="Send andmeldelse" name="upload">
       </form>
     </div>
   </div>
