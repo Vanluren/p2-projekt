@@ -3,7 +3,7 @@ $ordervalue = 'created_at';
 $curr_department = $_SESSION['department'];
 $sql_stmt = "SELECT * FROM ticket WHERE department = $curr_department ORDER BY $ordervalue";
 
-require_once CONFIG_PATH'/config.php';
+require_once CONFIG_PATH.'/config.php';
 
     $result = mysqli_query($link, $sql_stmt);
  ?>
