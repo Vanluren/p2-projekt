@@ -1,6 +1,6 @@
 <?php
 // Include config file
-require_once 'config.php';
+require_once '../config/config.php';
 
 // Define variables and initialize with empty values
 $username = $password = "";
@@ -29,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             // Prepare a select statement
         if ($radio_val == 'vicevaert') {
-            $sql = "SELECT username, password FROM loginv WHERE username = ?";
+            $sql = "SELECT username, password, department FROM loginv WHERE username = ?";
         }else {
           $sql = "SELECT username, password, department FROM loginb WHERE username = ?";
 
@@ -99,7 +99,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   <div class="container-fluid">
     <div class="container">
       <div class="row">
-        <div class="col-sm-4 col-sm-offset-4">
+        <div class="col-sm-4 offset-sm-4">
           <div class="login__wrapper">
             <img src="assets/images/nsb_logo.png" class="centerImage" alt="Broomie Logo" width="80%">
               <h2>Login</h2>

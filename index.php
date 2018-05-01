@@ -1,4 +1,6 @@
 <?php
+    require_once './config/config.php';
+
     include 'src/modules/header.php';
 
 	if ($_SESSION['user-type'] == 'vicevaert') {
