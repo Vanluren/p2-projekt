@@ -31,11 +31,34 @@
         $navn_string = $_POST['navn'];
         $tlf_int = $_POST['telefon'];
         $email_string = $_POST['email'];
-        $image_path_string="";
         $department_int = 00;
         $beboer_id_int=1;
         $addresse_string = "";
-        // $user_type = $_SESSION['user-type'];
+
+        $image_path_string = '/uploads/images/'.basename($_FILES["fileToUpload"]["name"]);
+        $target_file = UPLOADS_IMAGES_PATH.'/'.basename($_FILES["fileToUpload"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+        // Check if image file is a actual image or fake image
+        if(isset($_POST["submit"])) {
+
+        	$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+
+            if($check !== false) {
+                $uploadOk = 1;
+            } else {
+                $uploadOk = 0;
+            }
+
+            if ($uploadOk == 0) {
+
+
+            } else {
+                move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
+            }
+        }
+
 
         mysqli_stmt_bind_param( $stmt,
                                 "sssssisiis",
@@ -63,7 +86,12 @@
 <div class="container">
   <div class="row">
     <div class="col-10 offset-1">
-      <form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="skade__form-wrapper">
+
+      <form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
+             method="post"
+             enctype="multipart/form-data"
+             class="skade__form-wrapper"
+      >
         <?php
           include 'modules/lokalisering-input.php';
 
@@ -76,7 +104,7 @@
           include 'modules/kontakt-oplysninger-input.php'
         ?>
 	      <div class='row skade__input-group'>
-		      <button type="submit" class='btn btn-success'>Send anmeldelse</button>
+		      <button type="submit" class='btn btn-success' name="submit">Send anmeldelse</button>
 	      </div>
       </form>
     </div>
