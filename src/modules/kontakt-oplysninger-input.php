@@ -1,6 +1,9 @@
 <div class="row skade__input-group">
 	<div class="col-12">
-		<h2 class="skade__input-header">Kontakoplysinger <i class="fa fa-question-circle"></i></h2>
+		<h2 class="skade__input-header">Kontakoplysinger <i class="fa fa-question-circle"
+		                                                    data-toggle="tooltip"
+		                                                    data-placement="right"
+		                                                    title="Hvordan kommer vi i kontakt med dig?"></i></h2>
 	</div>
 	<div class='w-100'></div>
 	<div class='col-12'>
