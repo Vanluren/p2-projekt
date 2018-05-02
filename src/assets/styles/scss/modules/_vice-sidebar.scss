@@ -1,10 +1,16 @@
 .vice-sidebar{
-	position: relative;
-	height: 100%;
-	overflow-y: auto;
 	&__wrapper{
-		height: 100%;
-		position: fixed;
+		padding-left: 0;
+		padding-right: 0;
+		position: fixed !important;
+		top: 160px;
+		bottom: 0;
+		left: 0;
+		z-index: 1000;
+		padding: 20px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		border-right: 1px solid #eee;
 		border-right: 1px solid gray;
 		background-color: lightgrey;
 	}
@@ -30,15 +36,4 @@
 		}
 	}
 
-}
-
-.sidebar-sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  position: relative;
-  top: 0;
-  height: calc(100vh - 48px);
-  padding-top: .5rem;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
