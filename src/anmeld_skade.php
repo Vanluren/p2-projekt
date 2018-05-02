@@ -62,7 +62,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-10 offset-1">
       <form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="skade__form-wrapper">
         <?php
           include 'modules/lokalisering-input.php';
@@ -75,7 +75,9 @@
 
           include 'modules/kontakt-oplysninger-input.php'
         ?>
-      <input type="submit" value="Send andmeldelse">
+	      <div class='row skade__input-group'>
+		      <input type="submit" value="Send andmeldelse">
+	      </div>
       </form>
     </div>
   </div>

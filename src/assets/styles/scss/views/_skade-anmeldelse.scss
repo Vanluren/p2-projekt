@@ -1,4 +1,13 @@
 .skade{
+	&__input{
+		&-header{
+			margin-top: 10px;
+		}
+		&-group{
+			margin-bottom: 10px;
+		}
+	}
+
   &__form-wrapper{
     display: flex;
     justify-content: center;
@@ -10,4 +19,17 @@
       text-transform: capitalize;
     }
   }
+}
+
+.kontakt__wrapper{
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	label{
+		display: inline-flex;
+		justify-content: space-between;
+	}
+	input{
+		width: 70%;
+	}
 }
