@@ -3,7 +3,7 @@
 
 	$ordervalue = 'created_at';
 	$curr_department = $_SESSION['department'];
-	$sql_stmt = "SELECT * FROM ticket WHERE department = $curr_department ORDER BY $ordervalue DESC";
+	$sql_stmt = "SELECT * FROM ticket WHERE department = $curr_department ORDER BY $ordervalue";
     $result = mysqli_query($link, $sql_stmt);
 
 	if (isset($_POST['submit'])) {
