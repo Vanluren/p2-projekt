@@ -28,7 +28,7 @@ if(!isset($_SESSION['username']) && empty($_SESSION['username'])){
 		  <div class="row">
 			  <div class="col-4">
 				  <div class="header-left__container">
-					  <a href="<?php ROOT_PATH ?>" class='navbar-brand'>
+					  <a href="<?php echo ROOT_PATH ?>" class='navbar-brand'>
 						  <img src="<?php echo ROOT_PATH; ?>/src/assets/images/logo.svg" class="header-left__image">
 					  </a>
 				  </div>
