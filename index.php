@@ -8,5 +8,3 @@
 	} else {
 	    include 'src/beboer_index.php';
 	}
-
-include 'src/modules/footer.php';
