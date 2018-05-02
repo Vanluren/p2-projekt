@@ -18,7 +18,11 @@ if(!isset($_SESSION['username']) && empty($_SESSION['username'])){
 	<title>Nørresundby Boligselskab</title>
 </head>
 
+<?php if ($_SESSION['user-type'] == 'beboer'): ?>
+<body class='fixed-nav beboer-footer'>
+<?php else: ?>
 <body class='fixed-nav sticky-footer'>
+<?php endif; ?>
   <!-- Header container åben -->
   <nav class="header__container fixed-top">
 		  <div class="row">

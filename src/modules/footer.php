@@ -1,7 +1,11 @@
 <!-- Begin footer -->
 <footer class="footer__wrapper">
 	<div class='container-fluid'>
-		<div class='col-10 offset-2'>
+            <?php if ($_SESSION['user-type'] == 'beboer'): ?>
+			<div class='col-12'>
+            <?php else: ?>
+            <div class='col-10 offset-2'>
+            <?php endif; ?>
 			<div class="footer__adrress-wrapper">
 				<p class="footer__text text-center">
 					Nørresundby Boligselskab
