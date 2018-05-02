@@ -7,3 +7,6 @@ gen
 /.idea/
 /node_modules/
 /yarn.lock
+public/js/*.hot-update.js
+public/js/*.hot-update.json
+
