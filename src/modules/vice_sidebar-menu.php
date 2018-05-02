@@ -32,7 +32,7 @@ if (!mysqli_connect_errno()) {
 		</div>
 		<div class='nav-item vice-sidebar__item'>
 			<a href="" class="vice-sidebar__link">
-				Skader <?php echo ($klager_cnt>0 ? '('.$klager_cnt.')' : '(0)'); ?>
+				Klager <?php echo ($klager_cnt>0 ? '('.$klager_cnt.')' : '(0)'); ?>
 			</a>
 		</div>
 		<div class='nav-item vice-sidebar__item'>
