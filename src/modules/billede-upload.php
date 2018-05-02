@@ -6,24 +6,22 @@
   $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
 
-  // Initialize message variable
-    $msg = "";
+  $msg_image = "";
 
-    // If upload button is clicked ...
-    if (isset($_POST['upload'])) {
-    	// Get image name
-    	$image_path_string = $_FILES['image']['name'];
+  if (!isset($_POST['picture'])) {
 
-    	// image file directory
-    	$target = ASSETS_IMAGES_PATH . "/uploads/".basename($image_path_string);
+    $image = $_FILES['picture']['name'];
 
+    $upload_folder = ROOT_PATH."/image_upload/";
 
-    	if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-    		$msg = "Image uploaded successfully";
+    $image_path_string = $upload_folder .  $image;
+
+      if (move_uploaded_file($_FILES['picture']['tmp_name'], $upload_folder)) {
+    		$msg = "Billedet er tilføjet";
     	}else{
-    		$msg = "Failed to upload image";
+    		$msg = "Billedet blev ikke tilføjet";
     	}
-    }
+}
 
  ?>
 
@@ -31,7 +29,7 @@
 <div class="row">
   <div class="col-sm-12">
     <div class="image-upload__wrapper">
-      <input type="file" name="image">
+      <input type="file" name="picture" >
     </div>
   </div>
 </div>

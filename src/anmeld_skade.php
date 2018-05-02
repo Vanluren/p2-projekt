@@ -58,6 +58,9 @@
         mysqli_close($link);
     }
   include 'modules/header.php';
+
+	var_dump($_POST);
+	var_dump($_FILES);
 ?>
 
 <div class="container">
@@ -75,8 +78,7 @@
 
           include 'modules/kontakt-oplysninger-input.php'
         ?>
-      <input type="submit" value="Send andmeldelse" name="upload">
-      </form>
+				<button type="submit" name="upload">Tilføj billede</button>      </form>
     </div>
   </div>
 </div>
