@@ -18,27 +18,28 @@ if(!isset($_SESSION['username']) && empty($_SESSION['username'])){
 	<title>Nørresundby Boligselskab</title>
 </head>
 
-<body>
+<body class='fixed-nav sticky-footer'>
   <!-- Header container åben -->
-  <div class="container-fluid header__container">
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="header-left__container">
-            <a href="index.php">
-              <img src="<?php echo ROOT_PATH; ?>/src/assets/images/nsb_logo.png" class="header-left__image">
-            </a>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="header-mid_container">
-          <h2 class="header-mid__text">Velkommen <span class="header-mid__text--bold"><?php echo $_SESSION['username']; ?></span></h2>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="header-right__container">
-          <?php include 'vice_header.php' ?>
-        </div>
-      </div>
-    </div>
-  </div>
-<!-- Header container luk -->
+  <nav class="header__container fixed-top">
+		  <div class="row">
+			  <div class="col-4">
+				  <div class="header-left__container">
+					  <a href="<?php ROOT_PATH ?>" class='navbar-brand'>
+						  <img src="<?php echo ROOT_PATH; ?>/src/assets/images/logo.svg" class="header-left__image">
+					  </a>
+				  </div>
+			  </div>
+			  <div class="<?php echo ($_SESSION['user-type'] == 'beboer' ? 'col-4' : 'col-6'); ?>">
+				  <div class="header-mid_container">
+					  <h2 class="header-mid__text">Velkommen <span class="header-mid__text--bold"><?php echo $_SESSION['username']; ?></span></h2>
+				  </div>
+			  </div>
+			  <?php if ($_SESSION['user-type'] == 'beboer'):?>
+			  <div class="col-4">
+				  <div class="header-right__container">
+                      <?php include 'vice_header.php' ?>
+				  </div>
+			  </div>
+			  <?php endif; ?>
+		  </div>
+  </nav>
