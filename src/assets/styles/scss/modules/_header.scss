@@ -1,21 +1,19 @@
 .header__container {
+  position: relative;
   background-color: lightgrey;
   border-bottom: 2px solid;
   border-color: black;
 }
-
-// .header__container > .col-sm-4{
-//   height: 100%;
-// }
 
 .header-left__container{
   height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+	padding: 5px 20px;
 }
 
-.header-left_image{
+.header-left__image{
   width: 170px;
   height: auto;
 }

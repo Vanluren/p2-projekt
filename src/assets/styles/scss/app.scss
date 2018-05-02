@@ -5,8 +5,15 @@ html {
 }
 
 body {
+	position: relative;
 	margin: 0;
 	font: 14px sans-serif;
+	&.fixed-nav{
+		padding-top: 140px;
+	}
+	&.sticky-footer{
+		margin-bottom: 56px;
+	}
 }
 
 @import
@@ -22,4 +29,5 @@ body {
 	"modules/vice-sidebar",
 	"modules/beboer_menu",
 	"modules/vice-header",
-	"modules/ticket";
+	"modules/ticket",
+	"modules/ticket-sortering";
