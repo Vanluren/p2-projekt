@@ -1,10 +1,14 @@
-.footer__wrapper{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  
+.footer {
+	&__wrapper {
+		position: absolute;
+		right: 0;
+		width: 100%;
+		line-height: 12px;
+		&.vice-footer {
+			bottom: -56px;
+		}
+		&.login-footer{
+			bottom: 0;
+		}
+	}
 }
