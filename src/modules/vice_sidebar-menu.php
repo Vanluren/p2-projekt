@@ -49,7 +49,7 @@ if (!mysqli_connect_errno()) {
 			</a>
 		</div>
 		<div class='nav-item vice-sidebar__item'>
-			<a href="<?php echo ROOT_PATH?>/src/logout.php" class="btn btn-danger">Log ud</a>
+			<a href="./src/logout.php" class="btn btn-danger">Log ud</a>
 		</div>
 	</nav>
 </aside>

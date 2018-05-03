@@ -39,7 +39,7 @@
       </div>
 	    <div class="row">
 		    <div class="col-sm-12">
-			    <a href="<?php echo ROOT_PATH?>/src/logout.php" class="btn btn-danger">
+			    <a href="<?php echo ROOT_PATH?>src/logout.php" class="btn btn-danger">
 				    Log ud
 			    </a>
 		    </div>

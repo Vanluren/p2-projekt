@@ -1,9 +1,5 @@
 <?php
 include_once CONFIG_PATH.'/config.php';
-session_start();
-if(!isset($_SESSION['username']) && empty($_SESSION['username'])){
-    header('location:src/login.php'); // redirect to login page if user details is not set in sessions
-}
 ?>
 <!doctype html>
 <html lang='en'>

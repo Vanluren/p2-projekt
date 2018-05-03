@@ -86,7 +86,7 @@ include 'modules/header.php';
 						<div class='col-4 offset-6'>
 							<div class='ticket-view__btn-wrapper'>
 								<a href="<?php echo ROOT_PATH ?>" class='btn btn-secondary btn-lg'>Tilbage</a>
-								<button class="btn btn-success btn-lg" data-toggle="modal" data-target="#exampleModal">Afslut Opgave</button>
+								<button class="btn btn-success btn-lg" data-toggle="modal" data-target="#exampleModal">Afslut opgave</button>
 							</div>
 						</div>
 					</div>

@@ -9,7 +9,7 @@ $result = mysqli_query($link, $sql_stmt);
 if (isset($_POST['submit'])) {
     if (isset($_POST['radio'])) {
         $ordervalue = $_POST['radio'];
-        $sql_stmt = "SELECT * FROM ticket WHERE department = $curr_department ORDER BY $ordervalue";
+        $sql_stmt = "SELECT * FROM ticket WHERE department = $curr_department AND arkiveret = 0 ORDER BY $ordervalue";
         $result = mysqli_query($link, $sql_stmt);
     }
 }

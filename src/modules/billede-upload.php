@@ -5,7 +5,6 @@
 	                                                  data-placement="right"
 	                                                  title="Billeder kan være af .jpg, .gif, .png format"></i></h2>
     <div class="image-upload__wrapper">
-	    <label for="fileToUpload">Vedhæft billede</label>
 	    <input type="file" name="fileToUpload" id="fileToUpload" class="form-control-file">
     </div>
   </div>
