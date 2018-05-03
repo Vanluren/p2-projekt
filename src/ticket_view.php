@@ -61,27 +61,20 @@ include 'modules/header.php';
 							</div>
 						</div>
 					</div>
-					<div class='row'>
+					<?php if($row['picture']>0):?>
+						<div class='row'>
 						<div class='col-12'>
 							<h2 class='ticket-view__header'>Billeder</h2>
 						</div>
 						<div class='w-100'></div>
 							<div class='col-3'>
 								<div class='ticket-view__image'>
-									<img src="http://via.placeholder.com/350x150">
-								</div>
-							</div>
-							<div class='col-3'>
-								<div class='ticket-view__image'>
-									<img src="http://via.placeholder.com/350x150">
-								</div>
-							</div>
-							<div class='col-3'>
-								<div class='ticket-view__image'>
-									<img src="http://via.placeholder.com/350x150">
+									<img src="<?php echo  ROOT_PATH.$row['picture']?>">
 								</div>
 							</div>
 					</div>
+					<?php endif;?>
+
 					<div class='row'>
 						<div class='col-4 offset-6'>
 							<div class='ticket-view__btn-wrapper'>
