@@ -36,10 +36,13 @@
         $addresse_string = "";
 
         $image_path_string = '/uploads/images/'.basename($_FILES["fileToUpload"]["name"]);
-        $target_file = UPLOADS_IMAGES_PATH.'/'.basename($_FILES["fileToUpload"]["name"]);
+        $target_file = UPLOADS_IMAGES_PATH.basename($_FILES["fileToUpload"]["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
+        if(!file_exists(UPLOADS_IMAGES_PATH)){
+        	mkdir(UPLOADS_IMAGES_PATH, 0777, true);
+        }
         // Check if image file is a actual image or fake image
         if(isset($_POST["submit"])) {
 

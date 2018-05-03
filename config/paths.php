@@ -33,7 +33,7 @@ define('ASSETS_PATH', ROOT_PATH.'/src/assets');
 define('ASSETS_IMAGES_PATH', ASSETS_PATH.'/images');
 
 
-define('UPLOADS_IMAGES_PATH', $_SERVER['DOCUMENT_ROOT'].ROOT_PATH.'/uploads/images' );
+define('UPLOADS_IMAGES_PATH', $_SERVER['DOCUMENT_ROOT'].ROOT_PATH.'/uploads/images/' );
 
 define('JS_PATH', PUBLIC_PATH.'/js');
 define('STYLES_PATH',PUBLIC_PATH.'/styles');
