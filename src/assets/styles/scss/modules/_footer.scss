@@ -1,9 +1,14 @@
-.footer{
-	&__wrapper{
+.footer {
+	&__wrapper {
 		position: absolute;
 		right: 0;
-		bottom: -56px;
 		width: 100%;
 		line-height: 12px;
+		&.vice-footer {
+			bottom: -56px;
+		}
+		&.login-footer{
+			bottom: 0;
+		}
 	}
 }
