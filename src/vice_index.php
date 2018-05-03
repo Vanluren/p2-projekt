@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
 									<input type="radio" name="radio" value="priority" <?php echo($ordervalue == 'priority' ? 'checked=""' : ''); ?>>
 									Prioritet
 								</label>
-								<input type="submit" name="submit" value="Sorter efter" class="btn btn-secondary" />
+								<input type="submit" name="submit" value="Sorter" class="btn btn-secondary" />
 							</form>
 						</div>
 					</div>
