@@ -58,31 +58,34 @@ include 'modules/header.php';
 ?>
 
 <div class="container">
-	<div class="row">
-		<div class="col-10 offset-1">
-			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="skade__form-wrapper">
-                <?php
-                include 'modules/lokalisering-input.php';
+  <div class="row">
+    <div class="col-10 offset-1">
 
-                include 'modules/beskrivelse-input.php';
+      <form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>"
+             method="post"
+             enctype="multipart/form-data"
+             class="skade__form-wrapper"
+      >
+        <?php
+          include 'modules/lokalisering-input.php';
 
-                include 'modules/billede-upload.php';
+          include 'modules/beskrivelse-input.php';
 
-                include 'modules/prioritering-input.php';
+          include 'modules/billede-upload.php';
 
-                include 'modules/kontakt-oplysninger-input.php'
-                ?>
-				<div class='row skade__input-group'>
-					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#anmeldelseModal">
-						Send anmeldelse
-					</button>
-				</div>
-			</form>
-		</div>
-	</div>
+          include 'modules/prioritering-input.php';
+
+          include 'modules/kontakt-oplysninger-input.php'
+        ?>
+	      <div class='row skade__input-group'>
+		      <button type="submit" class='btn btn-success' name="submit">Send anmeldelse</button>
+	      </div>
+      </form>
+    </div>
+  </div>
 </div>
 <?php if ($_SERVER['REQUEST_METHOD'] == 'POST'):
-	
+
 	?>
 	<!-- Modal -->
 	<div class="modal fade ticket-modal in"
@@ -129,4 +132,3 @@ include 'modules/header.php';
 <?php
 endif;
 include 'modules/footer.php'; ?>
-
