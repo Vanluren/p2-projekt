@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
 													Lejlighed: <?php echo $row['address'] ?></h2>
 												<div class='ticket__beskrivelse'>
 													<p class="ticket__text">
-														Beskrivelse: <?php echo $row['beskrivelse_text']; ?></p>
+													<?php echo substr($row['beskrivelse_text'], 0, 200); ?>...</p>
 												</div>
 											</div>
 											<div class='ticket__wrapper--right'>
