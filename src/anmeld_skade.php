@@ -42,20 +42,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!file_exists(UPLOADS_IMAGES_PATH)) {
         mkdir(UPLOADS_IMAGES_PATH, 0777, true);
     }
-    // Check if image file is a actual image or fake image
-    if (isset($_POST["submit"])) {
-        $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-        if ($check !== false) {
-            $uploadOk = 1;
-        } else {
-            $uploadOk = 0;
-        }
-        if ($uploadOk == 0) {
-        } else {
-            move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
-            $image_path_string = '/uploads/images/' . basename($_FILES["fileToUpload"]["name"]);
-        }
-    }
+
+    $image_path_string = '/uploads/images/' . basename($_FILES["fileToUpload"]["name"]);
+    move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
 
     mysqli_stmt_bind_param($stmt,
         "sssssisiis",
@@ -103,6 +92,7 @@ include 'modules/header.php';
 
                     include 'modules/kontakt-oplysninger-input.php'
                     ?>
+                    <?php var_dump($_FILES);?>
 					<div class='row skade__input-group'>
 						<a href="<?php echo ROOT_PATH ?>" class='btn btn-secondary'>Tilbage</a>
 						<button type='button' class='btn btn-success' id='skadeSubmitBtn' data-toggle="modal"
@@ -161,6 +151,7 @@ include 'modules/header.php';
 								<span>Email:</span>
 								<p id="emailOutput"></p>
 							</label>
+
 						</div>
 					</div>
 				</div>
