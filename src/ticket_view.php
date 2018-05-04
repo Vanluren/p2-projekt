@@ -66,14 +66,6 @@ include 'modules/header.php';
 							<h2 class='ticket-view__header'>Billeder</h2>
 						</div>
 						<div class='w-100'></div>
-						<?php if ($row['picture']):?>
-							<div class='col-3'>
-								<div class='ticket-view__image'>
-									<?php var_dump($row['picture']); ?>
-
-								</div>
-							</div>
-						<? endif; ?>
 					</div>
 					<div class='row'>
 						<div class='col-4 offset-6'>
