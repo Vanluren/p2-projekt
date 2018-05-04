@@ -112,8 +112,8 @@ include 'modules/header.php';
 			</div>
 			<div class="modal-footer ticket-modal__footer">
 				<form class='ticket-modal__form' action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method='post'>
-					<button type='submit' class='btn btn-primary' name='arkiver' value='<?php echo $ticket_id?>'>Ja</button>
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Nej</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Annuller</button>
+					<button type='submit' class='btn btn-success' name='arkiver' value='<?php echo $ticket_id?>'>Afslut opgave</button>
 				</form>
 			</div>
 		</div>

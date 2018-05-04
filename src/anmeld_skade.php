@@ -100,6 +100,7 @@
           include 'modules/kontakt-oplysninger-input.php'
         ?>
 	      <div class='row skade__input-group'>
+		      <a href="<?php echo ROOT_PATH ?>" class='btn btn-secondary'>Tilbage</a>
 		      <button type="submit" class='btn btn-success' name="submit">Send anmeldelse</button>
 	      </div>
       </form>

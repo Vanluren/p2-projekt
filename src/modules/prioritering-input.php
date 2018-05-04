@@ -1,14 +1,11 @@
 <div class="row skade__input-group">
 	<div class="col-sm-12">
-		<h2 class="skade__input-header">Prioritering <i class="fa fa-question-circle"
-		                                                data-toggle="tooltip"
-		                                                data-placement="right"
-		                                                title="Foreslå en prioritering af skaden"></i></h2>
+		<h2 class="skade__input-header">Forslag til prioritering </h2>
 		<select name="prioritering" id="" class="skade__dropdown input__dropdown">
 			<option selected="selected">Vælg venligst</option>
-			<option value="a">Høj</option>
-			<option value="b">Middel</option>
-			<option value="c">Lav</option>
+			<option value="lav">Lav</option>
+			<option value="middel">Middel</option>
+			<option value="hoej">Høj</option>
 		</select>
 	</div>
 </div>

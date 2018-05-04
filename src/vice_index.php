@@ -8,8 +8,23 @@ $result = mysqli_query($link, $sql_stmt);
 
 if (isset($_POST['submit'])) {
     if (isset($_POST['radio'])) {
-        $ordervalue = $_POST['radio'];
-        $sql_stmt = "SELECT * FROM ticket WHERE department = $curr_department AND arkiveret = 0 ORDER BY $ordervalue";
+    	$ordervalue = $_POST['radio'];
+
+        switch ($ordervalue) {
+            case "created_at":
+                $sql_stmt = "SELECT * FROM ticket WHERE department = $curr_department AND arkiveret = 0 ORDER BY $ordervalue DESC";
+                break;
+            case "aldste":
+                $sql_stmt = "SELECT * FROM ticket WHERE department = $curr_department AND arkiveret = 0 ORDER BY created_at ASC";
+                break;
+            case "priority":
+                $sql_stmt = "SELECT * FROM ticket WHERE department = $curr_department AND arkiveret = 0 ORDER BY $ordervalue";
+                break;
+            default:
+                $sql_stmt = "SELECT * FROM ticket WHERE department = $curr_department AND arkiveret = 0 ORDER BY $ordervalue";
+        }
+
+
         $result = mysqli_query($link, $sql_stmt);
     }
 }
@@ -29,6 +44,10 @@ if (isset($_POST['submit'])) {
 									Nyeste
 								</label>
 								<label>
+									<input type="radio" name="radio" value="aldste" <?php echo($ordervalue == 'aldste' ? 'checked=""' : ''); ?>>
+									Ældste
+								</label>
+								<label>
 									<input type="radio" name="radio" value="priority" <?php echo($ordervalue == 'priority' ? 'checked=""' : ''); ?>>
 									Prioritet
 								</label>
@@ -42,11 +61,14 @@ if (isset($_POST['submit'])) {
                     if (mysqli_num_rows($result) > 0):
                         while ($row = mysqli_fetch_assoc($result)):
                             $date = date_create($row['created_at']);
-                            if ($row['priority'] == 'a') {
+                            if ($row['priority'] == 'hoej') {
+                            	$priority = 'Høj';
                                 $bubble_color = 'red';
-                            } elseif ($row['priority'] == 'b') {
+                            } elseif ($row['priority'] == 'middel') {
+                                $priority = 'Middel';
                                 $bubble_color = 'yellow';
                             } else {
+                                $priority = 'Lav';
                                 $bubble_color = 'green';
                             }
                             ?>
@@ -64,12 +86,13 @@ if (isset($_POST['submit'])) {
 												</div>
 											</div>
 											<div class='ticket__wrapper--right'>
-												<div class='ticket__prioritering'>Prioritering
+												<div class='ticket__prioritering'>Prioritering:
+													<?php echo $priority ?>
 													<div class='ticket__bubble <?php echo $bubble_color ?>'></div>
 												</div>
 												<div class='ticket__afdeling'>
 													Afdeling: <?php echo $row['department']; ?></div>
-												<div class='ticket__date'> <?php echo date_format($date, 'd/m/y'); ?></div>
+												<div class='ticket__date'> <?php echo date_format($date, 'd/m/y H:i:s'); ?></div>
 											</div>
 										</div>
 									</div>
