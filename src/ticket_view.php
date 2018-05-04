@@ -70,8 +70,6 @@ include 'modules/header.php';
 
 							<div class='col-3'>
 								<div class='ticket-view__image'>
-									<?php var_dump($row['picture']); ?>
-                                    <?php echo ROOT_PATH; ?>
 									<img src="<?php echo ROOT_PATH.$row['picture']; ?>">
 								</div>
 							</div>

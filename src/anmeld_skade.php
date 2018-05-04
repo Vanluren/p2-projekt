@@ -92,7 +92,6 @@ include 'modules/header.php';
 
                     include 'modules/kontakt-oplysninger-input.php'
                     ?>
-                    <?php var_dump($_FILES);?>
 					<div class='row skade__input-group'>
 						<a href="<?php echo ROOT_PATH ?>" class='btn btn-secondary'>Tilbage</a>
 						<button type='button' class='btn btn-success' id='skadeSubmitBtn' data-toggle="modal"
