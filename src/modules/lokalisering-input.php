@@ -1,7 +1,7 @@
 <div class="row skade__input-group">
 	<div class="col-sm-12">
-			<h2 class="skade__input-header">Hvor er skaden sket?</i></h2>
-		<select name="lokalisering" id="" class="skade__dropdown input__dropdown" required>
+			<h3 class="skade__input-header">Hvor er skaden sket?</i></h3>
+		<select name="lokalisering" id="lokalisering" class="skade__dropdown input__dropdown" required>
 			<option selected="selected">Vælg venligst</option>
 			<option value="koekken">Køkken</option>
 			<option value="badevaerelse">Badeværelse</option>

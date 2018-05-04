@@ -108,7 +108,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       <div class="row">
         <div class="col-sm-4 offset-sm-4">
           <div class="login__wrapper">
-            <img src="assets/images/nsb_logo.png" class="centerImage" alt="Broomie Logo" width="80%">
+            <img src="assets/images/logo.svg" class="centerImage" alt="Broomie Logo" width="80%">
               <h2>Login</h2>
               <p>Udfyld dine oplysninger for at logge ind.</p>
               <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

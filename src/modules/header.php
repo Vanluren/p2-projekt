@@ -29,11 +29,23 @@ include_once CONFIG_PATH.'/config.php';
 					  </a>
 				  </div>
 			  </div>
-			  <div class="<?php echo ($_SESSION['user-type'] == 'beboer' ? 'col-4' : 'col-6'); ?>">
-				  <div class="header-mid_container">
-					  <h2 class="header-mid__text">Velkommen <span class="header-mid__text--bold"><?php echo $_SESSION['username']; ?></span></h2>
-				  </div>
-			  </div>
+
+			  <?php
+			    if ($_SESSION['user-type'] == 'beboer'):
+			  ?>
+				    <div class="col-4">
+					    <div class="header-mid_container">
+						    <h2 class="header-mid__text"><span class="header-mid__text--bold"><?php echo $_SESSION['user-address']; ?></span></h2>
+					    </div>
+				    </div>
+			    <?php else: ?>
+				    <div class="col-6">
+					    <div class="header-mid_container">
+						    <h1 class="header-mid__text"><span class="header-mid__text--bold"><?php echo $_SESSION['user-address']; ?></span></h1>
+					    </div>
+				    </div>
+			  <?php endif;?>
+
 			  <?php if ($_SESSION['user-type'] == 'beboer'):?>
 			  <div class="col-4">
 				  <div class="header-right__container">
