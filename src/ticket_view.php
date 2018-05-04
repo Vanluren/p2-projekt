@@ -61,27 +61,20 @@ include 'modules/header.php';
 							</div>
 						</div>
 					</div>
+                    <?php if($row['picture'] != ''):?>
 					<div class='row'>
 						<div class='col-12'>
 							<h2 class='ticket-view__header'>Billeder</h2>
 						</div>
 						<div class='w-100'></div>
+
 							<div class='col-3'>
 								<div class='ticket-view__image'>
-									<img src="http://via.placeholder.com/350x150">
-								</div>
-							</div>
-							<div class='col-3'>
-								<div class='ticket-view__image'>
-									<img src="http://via.placeholder.com/350x150">
-								</div>
-							</div>
-							<div class='col-3'>
-								<div class='ticket-view__image'>
-									<img src="http://via.placeholder.com/350x150">
+									<img src="<?php echo ROOT_PATH.$row['picture']; ?>">
 								</div>
 							</div>
 					</div>
+					<?php endif; ?>
 					<div class='row'>
 						<div class='col-4 offset-6'>
 							<div class='ticket-view__btn-wrapper'>
@@ -112,8 +105,8 @@ include 'modules/header.php';
 			</div>
 			<div class="modal-footer ticket-modal__footer">
 				<form class='ticket-modal__form' action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' method='post'>
-					<button type='submit' class='btn btn-primary' name='arkiver' value='<?php echo $ticket_id?>'>Ja</button>
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Nej</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Annuller</button>
+					<button type='submit' class='btn btn-success' name='arkiver' value='<?php echo $ticket_id?>'>Afslut opgave</button>
 				</form>
 			</div>
 		</div>

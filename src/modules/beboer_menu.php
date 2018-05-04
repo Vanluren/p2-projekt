@@ -1,4 +1,9 @@
 <div class="row">
+	<div class='col-12'>
+		<div class="alert alert-warning" role="alert">
+			Hvis din henvendelse er akut, bedes du kontakte din vicevært direkte pr. telefon på: <?php echo $GLOBALS['vice-tlf'];?>
+		</div>
+	</div>
   <div class="col-sm-4 offset-sm-4">
     <div class="beboer-menu__wrapper">
       <div class="row">
@@ -53,10 +58,10 @@
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div class="modal-body">
-				Der er desværre ingenting at se her.
+				Dette er stadig under konstruktion, beklager!
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">Say no more, fam..</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
 			</div>
 		</div>
 	</div>

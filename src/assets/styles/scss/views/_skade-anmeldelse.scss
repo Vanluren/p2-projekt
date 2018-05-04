@@ -1,10 +1,19 @@
 .skade{
+	&__header{
+		padding-top: 20px;
+
+	}
 	&__input{
 		&-header{
+			justify-self: flex-start;
 			margin-top: 10px;
 		}
 		&-group{
+			width: 100%;
 			margin-bottom: 5px;
+			.btn{
+				margin: 0 10px;
+			}
 		}
 	}
 
@@ -14,14 +23,12 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
-	  margin: 20px auto;
+	  margin: 0 auto;
     h2{
-      font-size: 24px;
-      text-transform: capitalize;
+	    justify-self: flex-start;
     }
   }
 }
-
 .kontakt__wrapper{
 	display: flex;
 	flex-direction: column;
