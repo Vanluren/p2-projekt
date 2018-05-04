@@ -28,7 +28,3 @@ function unipath(base) {
     return path.resolve(path.join.apply(null, _paths));
   }
 }
-
-function currentWorkigDir() {
-	console.log(window.location);
-}

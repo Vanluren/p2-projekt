@@ -69,7 +69,8 @@ include 'modules/header.php';
 						<?php if ($row['picture']):?>
 							<div class='col-3'>
 								<div class='ticket-view__image'>
-									<img src="<?php echo ROOT_PATH.$row['picture']; ?>">
+									<?php var_dump($row['picture']); ?>
+
 								</div>
 							</div>
 						<? endif; ?>
