@@ -32,19 +32,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $department_int = $_SESSION['department'];
     $beboer_id_int = $_SESSION['user-id'];
     $addresse_string = $_SESSION['user-address'];
-    $image_path_string = '';
-
-
-    $target_file = UPLOADS_IMAGES_PATH . basename($_FILES["fileToUpload"]["name"]);
-    $uploadOk = 1;
-    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-
-    if (!file_exists(UPLOADS_IMAGES_PATH)) {
-        mkdir(UPLOADS_IMAGES_PATH, 0777, true);
+    if (isset($_FILES["fileToUpload"]["name"])){
+        $image_path_string = '/uploads/images/' . basename($_FILES["fileToUpload"]["name"]);
+    }else{
+    	$image_path_string = '';
     }
 
-    $image_path_string = '/uploads/images/' . basename($_FILES["fileToUpload"]["name"]);
-    move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
+
 
     mysqli_stmt_bind_param($stmt,
         "sssssisiis",
@@ -136,6 +130,12 @@ include 'modules/header.php';
 						<p id="prioriteringOutput"></p>
 					</div>
 					<div class='col-12'>
+						<h3>Billeder:</h3>
+						<div id="billederOutput">
+						</div>
+					</div>
+
+					<div class='col-12'>
 						<h3>Kontaktoplysninger:</h3>
 						<div class="kontakt__wrapper">
 							<label>
@@ -150,7 +150,6 @@ include 'modules/header.php';
 								<span>Email:</span>
 								<p id="emailOutput"></p>
 							</label>
-
 						</div>
 					</div>
 				</div>

@@ -1,6 +1,12 @@
 $( document ).ready(function() {
-	var lokalisering, navn, tlf, beskrivelse = false;
+	var lokalisering, navn, tlf, beskrivelse, billede = false;
 	var submitable = false;
+	var uploadedImage = '';
+	var getUrl = window.location;
+	var urlArr = getUrl.pathname.split('/');
+	var srcIndex = urlArr.indexOf('src');
+	var newArr = urlArr.slice(0, srcIndex).join('/')
+	var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + newArr;
 	
 	$('#skadeSubmitBtn').click(function() {
 		var valg = 'Vælg venligst';
@@ -34,11 +40,11 @@ $( document ).ready(function() {
 		$('#prioriteringOutput').text($( "#prioritering option:selected" ).text());
 		$('#emailOutput').text($( ".kontakt_text-input[name=email]" ).val());
 		
-		
 		if(lokalisering ||
 		   beskrivelse ||
 		   navn ||
-		   tlf
+		   tlf ||
+		   billede
 		){
 			submitable = true;
 		}else{
@@ -51,8 +57,49 @@ $( document ).ready(function() {
 		if(submitable){
 			$('#skadeForm').submit();
 		}else{
-			console.log('hej');
+			console.log('der er noget der ikke kan submittes!');
 		}
+	});
+	
+	$('#upload').click(function(){
+		var fd = new FormData();
+		var files = $('#file')[0].files[0];
+		fd.append('fileToUpload',files);
+		
+		// AJAX request
+		$.ajax({
+			url: 'modules/image-upload.php',
+			type: 'POST',
+			data: fd,
+			contentType: false,
+			processData: false,
+			success: function(response){
+				if(response != 0){
+					// Show image preview
+					$('.image-upload__alert').addClass('alert-success');
+					$('.image-upload__alert')
+						.append(' <span>Image Uploaded!</span>')
+					$('.image-upload__icon').addClass('fa-check-square')
+					$('#billederOutput')
+						.append("<div class='billede__preview'><img src='"+baseUrl+'/uploads/images/'+uploadedImage+"' alt='preview'></div>")
+					billede = true;
+				}else{
+					$('.image-upload__alert').addClass('alert-danger');
+					$('.image-upload__alert')
+						.append(' <span>Billedet blev ikke uploadet!</span>')
+					$('.image-upload__icon').addClass('fa-exclamation-triangle')
+					
+				}
+			}
+		});
+	});
+	
+	$('#file').change(function(e) {
+		var label = this.next
+		var fileName = '';
+		fileName = e.target.value.split( '\\' ).pop();
+		$('.image-picker__file-name').text(fileName);
+		uploadedImage = fileName;
 	});
 });
 $(function () {
