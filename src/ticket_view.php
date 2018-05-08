@@ -18,6 +18,20 @@ if(isset($_POST['arkiver'])){
     mysqli_close($link);
 }
 
+switch ($row['location']) {
+    case "koekken":
+        $location = 'Køkken';
+        break;
+    case "badevaerelse":
+        $location = 'Badeværelse';
+        break;
+    case "andet":
+        $location = 'Anden lokalisering';
+        break;
+    default:
+        $location = $row['location'];
+}
+
 include 'modules/header.php';
 ?>
 <div class="container-fluid"><!-- <div> Index container-fluid åben -->
@@ -45,8 +59,19 @@ include 'modules/header.php';
 							<div class='ticket-view__info'>
 								<span class="ticket__header">Afdeling: <?php echo $row['department'] ?></span>
 								<span class="ticket__header">Lejlighed: <?php echo $row['address'] ?></span>
-								<span class="ticket__header">Prioritering: <?php echo $row['priority'] ?></span>
-								<span class="ticket__header">Lokalisering: <?php echo $row['location'] ?></span>
+								<span class="ticket__header">Prioritering:
+									<?php  if ($row['priority'] == 'hoej') {
+                                        $priority = 'Høj';
+                                    } elseif ($row['priority'] == 'middel') {
+                                        $priority = 'Middel';
+                                    } else {
+                                        $priority = 'Lav';
+                                    }
+                                    echo $priority;
+                                    ?>
+								</span>
+
+								<span class="ticket__header">Lokalisering: <?php echo $location?></span>
 							</div>
 						</div>
 					</div>
