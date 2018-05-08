@@ -38,20 +38,17 @@ include_once CONFIG_PATH.'/config.php';
 						    <h2 class="header-mid__text"><span class="header-mid__text--bold"><?php echo $_SESSION['user-address']; ?></span></h2>
 					    </div>
 				    </div>
+				    <div class="col-4">
+					    <div class="header-right__container">
+                            <?php include 'vice_header.php' ?>
+					    </div>
+				    </div>
 			    <?php else: ?>
 				    <div class="col-6">
 					    <div class="header-mid_container">
-						    <h1 class="header-mid__text"><span class="header-mid__text--bold"><?php echo $_SESSION['user-address']; ?></span></h1>
+						    <h1 class="header-mid__text"><span class="header-mid__text--bold">Velkommen <?php echo $_SESSION['username']; ?></span></h1>
 					    </div>
 				    </div>
 			  <?php endif;?>
-
-			  <?php if ($_SESSION['user-type'] == 'beboer'):?>
-			  <div class="col-4">
-				  <div class="header-right__container">
-                      <?php include 'vice_header.php' ?>
-				  </div>
-			  </div>
-			  <?php endif; ?>
 		  </div>
   </nav>
