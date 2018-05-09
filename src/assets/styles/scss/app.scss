@@ -1,0 +1,36 @@
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	position: relative;
+	margin: 0;
+	font: 14px sans-serif;
+	&.fixed-nav{
+		padding-top: 130px;
+	}
+	&.sticky-footer{
+		margin-bottom: 56px;
+	}
+	&.beboer-footer{
+		height: 94vh;
+	}
+}
+
+@import
+	"views/login",
+	"views/logout",
+	"views/image_upload",
+	"views/skade-anmeldelse",
+	"views/ticket-view";
+
+@import
+	"modules/footer",
+	"modules/header",
+	"modules/vice-sidebar",
+	"modules/beboer_menu",
+	"modules/vice-header",
+	"modules/ticket",
+	"modules/ticket-sortering";

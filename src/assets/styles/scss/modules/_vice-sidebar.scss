@@ -1,0 +1,39 @@
+.vice-sidebar{
+	&__wrapper{
+		padding-left: 0;
+		padding-right: 0;
+		position: fixed !important;
+		top: 130px;
+		bottom: 0;
+		left: 0;
+		z-index: 1000;
+		padding: 20px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		border-right: 1px solid #eee;
+		border-right: 1px solid gray;
+		background-color: lightgrey;
+	}
+
+	&__link{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		padding: 10px 25px;
+	}
+
+	&__item{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		a{
+			text-decoration: none;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+
+}
