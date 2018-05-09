@@ -4,3 +4,7 @@
 out
 gen
 
+/yarn.lock
+/node_modules/
+/public/js/*.hot-update.json
+/public/js/*.hot-update.js
