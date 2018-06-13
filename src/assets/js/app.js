@@ -54,6 +54,20 @@ $( document ).ready(function() {
 			console.log('hej');
 		}
 	});
+	$.urlParam = function(name){
+		var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+		if (results==null){
+			return null;
+		}
+		else{
+			return decodeURI(results[1]) || 0;
+		}
+	}
+	
+		if($.urlParam('confirmTicket')){
+			$('#confirmModal').modal('show');
+		}
+	
 });
 $(function () {
 	$('[data-toggle="tooltip"]').tooltip()

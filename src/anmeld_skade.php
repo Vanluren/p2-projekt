@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     mysqli_stmt_execute($stmt);
     /* close connection */
     mysqli_close($link);
-    header("Location: ../");
+    header("Location: ../index.php?confirmTicket=true");
     exit();
 }
 include 'modules/header.php';

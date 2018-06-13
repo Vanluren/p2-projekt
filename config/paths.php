@@ -9,17 +9,21 @@
 	$REQ_URI_EXPL = explode('/', $REQ_URI);
 
     //Hvis src findes i array'et, så ved vi at pathen er til en subdir
-    if(in_array('src',$REQ_URI_EXPL)){
+    if(in_array('src',$REQ_URI_EXPL)) {
+        $needle = 'src';
+    } elseif (in_array('index.php?confirmTicket=true', $REQ_URI_EXPL)){
+        $needle = 'index.php?confirmTicket=true';
+    }
+
+    if($needle == 'src' || $needle == 'index.php?confirmTicket=true'){
         //Så finder vi hvor fra vi skal fjerne alle subir paths
-        $src_index = array_search('src', $REQ_URI_EXPL);
+        $needle_index = array_search($needle, $REQ_URI_EXPL);
         //så slicer du fra 0 til første subdir path
-        $ROOT = array_slice($REQ_URI_EXPL,0, $src_index);
+        $ROOT = array_slice($REQ_URI_EXPL,0, $needle_index);
         //vi bygger stien igen
         $ROOT_DIR_PATH = implode('/',$ROOT);
-
         //og sætter ROOT_PATH som global variabel
         define('ROOT_PATH', $ROOT_DIR_PATH);
-
     }else{
         //hvis ikke src findes i arrayet, ved vi at vi er i root-folderen
         //så vi sætter globale variabler til den nuværende sti.
