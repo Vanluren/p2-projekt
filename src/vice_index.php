@@ -2,8 +2,9 @@
 require_once CONFIG_PATH . '/config.php';
 
 $ordervalue = 'created_at';
+$checked = 'aldste';
 $curr_department = $_SESSION['department'];
-$sql_stmt = "SELECT * FROM ticket WHERE department = $curr_department AND arkiveret = 0 ORDER BY $ordervalue";
+$sql_stmt = "SELECT * FROM ticket WHERE department = $curr_department AND arkiveret = 0 ORDER BY $ordervalue ASC";
 $result = mysqli_query($link, $sql_stmt);
 
 if (isset($_POST['submit'])) {
@@ -13,17 +14,20 @@ if (isset($_POST['submit'])) {
         switch ($ordervalue) {
             case "created_at":
                 $sql_stmt = "SELECT * FROM ticket WHERE department = $curr_department AND arkiveret = 0 ORDER BY $ordervalue DESC";
+                $checked = 'create_at';
                 break;
             case "aldste":
                 $sql_stmt = "SELECT * FROM ticket WHERE department = $curr_department AND arkiveret = 0 ORDER BY created_at ASC";
+                $checked = 'aldste';
                 break;
             case "priority":
                 $sql_stmt = "SELECT * FROM ticket WHERE department = $curr_department AND arkiveret = 0 ORDER BY $ordervalue";
+                $checked = 'priority';
                 break;
             default:
-                $sql_stmt = "SELECT * FROM ticket WHERE department = $curr_department AND arkiveret = 0 ORDER BY $ordervalue";
+                $sql_stmt = "SELECT * FROM ticket WHERE department = $curr_department AND arkiveret = 0 ORDER BY $ordervalue ASC";
+                $checked = 'aldste';
         }
-
 
         $result = mysqli_query($link, $sql_stmt);
     }
@@ -40,15 +44,15 @@ if (isset($_POST['submit'])) {
 						<div class="ticket-sortering">
 							<form method="post">
 								<label>
-									<input type="radio" name="radio" value="created_at" <?php echo($ordervalue == 'created_at' ? 'checked=""' : ''); ?>>
-									Nyeste
-								</label>
-								<label>
-									<input type="radio" name="radio" value="aldste" <?php echo($ordervalue == 'aldste' ? 'checked=""' : ''); ?>>
+									<input type="radio" name="radio" value="aldste" <?php echo($checked == 'aldste' ? 'checked=""' : ''); ?>>
 									Ældste
 								</label>
 								<label>
-									<input type="radio" name="radio" value="priority" <?php echo($ordervalue == 'priority' ? 'checked=""' : ''); ?>>
+									<input type="radio" name="radio" value="created_at" <?php echo($checked == 'created_at' ? 'checked=""' : ''); ?>>
+									Nyeste
+								</label>
+								<label>
+									<input type="radio" name="radio" value="priority" <?php echo($checked == 'priority' ? 'checked=""' : ''); ?>>
 									Prioritet
 								</label>
 								<input type="submit" name="submit" value="Sorter" class="btn btn-secondary" />
